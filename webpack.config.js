@@ -9,6 +9,7 @@ module.exports = {
     filename: "bundle.js",
     path: path.resolve(__dirname, "./dist"),
     clean: true,
+    assetModuleFilename: 'images/[hash][ext][query]'
   },
   devtool: 'source-map',
   mode: "development",
@@ -20,7 +21,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: "project",
+      title: "Dust Notice",
       template: "./index.html",
       inject: "body",
       favicon: "./favicon.ico"
@@ -30,9 +31,13 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.css$/,
-        use: [MiniCssExtractPlugin.loader, "css-loader"],
+        test: /\.s[ac]ss$/i,
+        use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
       },
+      {
+        test: /\.jpeg$/,
+        type:'asset/inline'
+      }
     ],
   },
   optimization: {

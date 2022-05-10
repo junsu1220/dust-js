@@ -1,0 +1,127 @@
+@import "./reset.scss";
+
+body {
+  position: relative;
+}
+
+header {
+  position: absolute;
+  left: 50%;
+  margin-left: -180px;
+  width: 360px;
+  height: 56px;
+  background-color: #6200EE;
+  .button-box {
+    display: flex;
+    justify-content: center;
+    .icon-box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 120px;
+      height: 56px;
+      color: #FFF;
+      flex-wrap: wrap;
+      .fa-magnifying-glass {
+        position: absolute;
+        font-size: 24px;
+        top: 5px;
+        cursor: pointer;
+      }
+      .fa-arrow-right {
+        position: absolute;
+        font-size: 24px;
+        top: 5px;
+        cursor: pointer;
+      }
+      .fa-angles-right {
+        position: absolute;
+        font-size: 24px;
+        top: 5px;
+        cursor: pointer;
+      }
+      p {
+        position: absolute;
+        font-size: 11px;
+        bottom: 5px;
+      }
+    }
+  }
+}
+
+section.dustNotice {
+  width: 360px;
+  height: 400px;
+  background-color: #FFF;
+  position: absolute;
+  left: 50%;
+  margin-left: -180px;
+  top: 56px;
+  .location-box {
+    width: 344px;
+    height: 70px;
+    position: absolute;
+    margin: 8px;
+    .fa-location-dot {
+      position: absolute;
+      font-size: 43px;
+      top: 10px;
+      left: 14px;
+    }
+    .now-location-text {
+      position: absolute;
+      font-size: 20px;
+      top: 10px;
+      left: 72px;
+    }
+    .location-text {
+      position: absolute;
+      font-size: 14px;
+      top: 30px;
+      left: 72px;
+    }
+  }
+  .main-notice {
+    font-size: 141px;
+    top: 105px;
+    left: 110px;
+    position: absolute;
+  }
+  .notice-text {
+    width: 312px;
+    font-size: 20px;
+    top: 323px;
+    left: 24px;
+    position: absolute;
+    text-align: center;
+  }
+}
+
+footer {
+  width: 360px;
+  height: 215px;
+  background-color: #6200EE;
+  position: absolute;
+  top: 456px;
+  left: 50%;
+  margin-left: -180px;
+  display: flex;
+  .notice-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 120px;
+    height: 215px;
+    .fa-face-smile {
+      font-size: 68px;
+    }
+    .sub-text {
+      color: #FFF;
+      p {
+        margin-top: 10px;
+        text-align: center;
+      }
+    }
+  }
+}

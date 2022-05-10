@@ -1,1 +1,2 @@
-import '../css/style.css';
+import "../scss/style.scss";
+import "@fortawesome/fontawesome-free/js/all.js";

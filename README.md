@@ -1,28 +1,57 @@
-# webpack-boilerplate
+## 프로젝트 주제 선정
 
-webpack boilterplate 입니다.<br><br> eslint-config-airbnb 가 적용되어있습니다. <br><br> 다운로드 혹은 git clone 하여 `npm install` 실행 후 사용하시면 됩니다.
+우리나라는 매일 미세먼지로 인해 고통을 받고 있다.
 
+특히 미세먼지는 육안으로는 잘 확인할 수 없다.
 
-## Installation
+이에 사용자의 위치를 파악하고 openAPI를 이용해
 
-```bash
-> npm install
-```
+그 지역의 미세먼지 측정량을 알려주는 웹 서비스를 만들고자 한다.
 
+## 기술
 
-## Run Dev Server
+코어: javascript
+스타일링: scss
+패키지 매니저: Yarn
+빌드: Webpack, Babel
+테스트: jest
 
-```bash
-> npm run dev
-```
+배포: netlify
 
-## Build
+## 기능
 
-```bash
-> npm run build
-```
+### 스토리
 
-## 새롭게 발견한 문제점
+- 스토리1
+  - 실내에서 환기를 시키거나, 실외로 나가야하는 고객이,
+  - 현재 자기위치의 (초)미세먼지 농도를 한눈에 알기 위해,
+  - 웹사이트에 들어온다.
+- 스토리2
+  - 다른 지역에 가야하는 고객이,
+  - 다른 지역의 (초)미세먼지 농도를 알기 위해,
+  - 웹에서 다른 지역을 검색한다.
+- 스토리3
+  - 다른 날짜의 (초)미세먼지 농도를 알고 싶은 고객이,
+  - 다른 날짜의 (초)미세먼지 농도를 알기 위해,
+  - 웹에서 다른 날짜를 검색한다.
 
-node version 16에서는 버전 오류가 생겨 npm install 시에 시간이 오래걸려 패키지가<br>
-정상적으로 실행되지 않으니 14버전으로 하시길 바랍니다.
+### 테스크
+
+- 스토리1의 Task
+  - 한눈에 알기 쉬운 UI/UX → adobe XD
+  - 고객의 현재위치 얻기 → navigator 객체에 geolocation 속성이용
+  - (초)미세먼지 농도 정보 제공 → open API 활용
+- 스토리2의 Task
+
+  - 검색하여 데이터정립 → ㅇ
+
+  [[JavaScript] 검색 기능 만들기 [펌]](https://yoonjong-park.tistory.com/entry/JavaScript-%EA%B2%80%EC%83%89-%EA%B8%B0%EB%8A%A5-%EB%A7%8C%EB%93%A4%EA%B8%B0-%ED%8E%8C)
+
+  - 검색데이터를 위치로 바꾸어 (초)미세먼지 농도 정보 제공 → open API 활용
+
+- 스토리 3의 Task
+  - 버튼을 누를 시 내일 혹은 모레까지 농도를 알 수 있게 하기 → open API 활용
+
+## 일정
+
+- 5/9 ~ 5/22
