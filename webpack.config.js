@@ -3,6 +3,7 @@ const TerserPlugin = require("terser-webpack-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const webpack = require("webpack")
 module.exports = {
   entry: "./src/js/index.js",
   output: {
@@ -27,6 +28,12 @@ module.exports = {
       favicon: "./favicon.ico"
     }),
     new MiniCssExtractPlugin({ filename: "style.css" }),
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jquery: 'jquery',
+      'window.jQuery': 'jquery',
+      jQuery: 'jquery'
+    })
   ],
   module: {
     rules: [
